@@ -169,7 +169,7 @@
         "kind": 6,
         "importPath": "main.models",
         "description": "main.models",
-        "peekOfCode": "class Aluno(models.Model):\n    nome = models.CharField(max_length=255)\n    telefone = models.IntegerField()\n    email = models.EmailField()\n    data_nascimento = models.DateField(null=True)\n    description = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    def __str__(self):",
+        "peekOfCode": "class Aluno(models.Model):\n    nome = models.CharField(max_length=254)\n    telefone = models.CharField(null=True,blank=True,max_length=15)\n    email = models.EmailField()\n    data_nascimento = models.DateField()\n    description = models.TextField()\n    created_at = models.DateTimeField(auto_now=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    user = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)\n    def __str__(self):",
         "detail": "main.models",
         "documentation": {}
     },
